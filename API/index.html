@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>this is api title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="plugins/prettyJSON/jquery.jsonPresenter.js"></script>
+    <link rel="stylesheet" type="text/css" href="plugins/prettyJSON/jquery.jsonPresenter.css">
+
+    <script language="javascript">
+      $("document").ready(function(){
+        var jsonExample = {
+            "_id": "111",
+            "bookName": "Pride and Prejudice",
+            "bookAuthor": "Jane Austen",
+            "pages": 310,
+            "trans": [
+                {
+                    "lang": "hebrew",
+                    "translator": "meir levy"
+                },
+                {
+                    "lang": "russion",
+                    "translator": "Boris Klayman"
+                }
+            ]
+        }
+        $("#jsonExample").jsonPresenter({json: jsonExample});
+      })
+    </script>
+
+    <style>
+      html{
+        font-family:arial;
+      }
+    </style>
+  </head>
+  <body>
+
+      <div class="wrapper">
+          <h1> Translation - API</h1>
+        <article>
+          <h1>Get All Books</h1>
+          <ul>
+            <li>relativePath: /getAllBooks</li>
+            <li>verb: GET</li>
+            <li>url: <a href="https://tutorial-2.herokuapp.com/getAllBooks" target="_blank">https://tutorial-2.herokuapp.com/getAllBooks</a></li>
+            <li>Descritpion: get json of all books from mlab</li>
+          </ul>
+        </article>
+
+        <article>
+          <h1>Get Book By ID</h1>
+          <ul>
+            <li>relativePath: /getBookByID</li>
+            <li>verb: POST</li>
+            <li>url: https://tutorial-2.herokuapp.com/getBookByID/222</li>
+            <li>Descritpion: get json of all books from mlab</li>
+          </ul>
+        </article>
+        
+
+          <article>
+          <h1>getBookByLang</h1>
+          <ul>
+            <li>relativePath: /getBookByLang</li>
+            <li>verb: POST</li>
+            <li>url: https://tutorial-2.herokuapp.com/getBookByID/222</li>
+            <li>Descritpion: get json of all books from mlab</li>
+          </ul>
+        </article>
+
+  
+         <article>
+          <h1>getBookByLangAndMaximumPages</h1>
+          <ul>
+            <li>relativePath: //getBookByLangAndMaximumPages/:lang/:pages</li>
+            <li>verb: PUT</li>
+            <li>url: https://tutorial-2.herokuapp.com/getBookByID/222</li>
+            <li>Descritpion: get books which has translation to :lang and also has maximum :pages pages.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Respond Example:</h3>
+          <div id='jsonExample'><!--loaded from jquery plugin--></div>
+        </article>
+      </div>
+
+
+
+
+
+
+  </body>
+</html>

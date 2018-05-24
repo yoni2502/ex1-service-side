@@ -1,0 +1,12 @@
+לוקחים את התקייה של תומר
+
+1. מוחקים את התיקייה git. (תקייה נסתרת)
+2. יוצרים גיט חדש באמצעות: git init
+3. לסנכרן את הגיט עם ההירוקו הנכון:
+	3.1 heroku login -> להזין את ההרשאות הנכונות
+	3.2 heroku git:remote -a appName
+	3.3 heroku ps:scale web=1 - כדי להפעיל את האפליקציה של ההירוקו
+4. כל עדכון גרסה(עדכון גיט בסיסי)
+	4.1 git add period
+	4.2 git commit -m "version" //safs
+	4.3 git push heroku master
