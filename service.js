@@ -37,7 +37,7 @@ function startService(){
       });
   });
 
-  app.get('/getBookByLang/:lang', (req,res) => {
+  app.post('/getBookByLang/:lang', (req,res) => {
     let lang = (req.params.lang).toLowerCase();
     Book.find({
       'trans.lang': lang
@@ -47,7 +47,7 @@ function startService(){
       });
   });
 
-  app.get('/getBookByLangAndMaximumPages/:lang/:pages', (req,res) => {
+  app.put('/getBookByLangAndMaximumPages/:lang/:pages', (req,res) => {
     let lang = (req.params.lang).toLowerCase();
     let pages = req.params.pages;
     //only books which has translation to lang and also has maximum pages

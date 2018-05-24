@@ -45,7 +45,7 @@
           <ul>
             <li>relativePath: /getAllBooks</li>
             <li>verb: GET</li>
-            <li>url: <a href="https://tutorial-2.herokuapp.com/getAllBooks" target="_blank">https://tutorial-2.herokuapp.com/getAllBooks</a></li>
+            <li>url: <a href="https://ex1-targil.herokuapp.com/getAllBooks" target="_blank">https://ex1-targil.herokuapp.com/getAllBooks</a></li>
             <li>Descritpion: get json of all books from mlab</li>
           </ul>
         </article>
@@ -53,10 +53,10 @@
         <article>
           <h1>Get Book By ID</h1>
           <ul>
-            <li>relativePath: /getBookByID</li>
+            <li>relativePath: /getBookByID/:id</li>
             <li>verb: POST</li>
-            <li>url: https://tutorial-2.herokuapp.com/getBookByID/222</li>
-            <li>Descritpion: get json of all books from mlab</li>
+            <li>url: https://ex1-targil.herokuapp.com/getBookByID/222</li>
+            <li>Descritpion: get book json by id</li>
           </ul>
         </article>
         
@@ -64,10 +64,10 @@
           <article>
           <h1>getBookByLang</h1>
           <ul>
-            <li>relativePath: /getBookByLang</li>
+            <li>relativePath: /getBookByLang/:lang</li>
             <li>verb: POST</li>
-            <li>url: https://tutorial-2.herokuapp.com/getBookByID/222</li>
-            <li>Descritpion: get json of all books from mlab</li>
+            <li>url: https://tutorial-2.herokuapp.com/getBookByLang/hebrew</li>
+            <li>Descritpion: get json of all books which has translation to :lang</li>
           </ul>
         </article>
 
@@ -75,9 +75,9 @@
          <article>
           <h1>getBookByLangAndMaximumPages</h1>
           <ul>
-            <li>relativePath: //getBookByLangAndMaximumPages/:lang/:pages</li>
+            <li>relativePath: /getBookByLangAndMaximumPages/:lang/:pages</li>
             <li>verb: PUT</li>
-            <li>url: https://tutorial-2.herokuapp.com/getBookByID/222</li>
+            <li>url: https://ex1-targil.herokuapp.com/getBookByLangAndMaximumPages/hebrew/230</li>
             <li>Descritpion: get books which has translation to :lang and also has maximum :pages pages.</li>
           </ul>
         </article>
